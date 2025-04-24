@@ -34,6 +34,31 @@
     </style>
 
     <style>
+        ol.alpha-paren {
+            list-style: none;
+            /* 기본 숫자·불릿 제거 */
+            counter-reset: item;
+            /* 카운터 초기화 */
+            padding-left: 0;
+            /* 들여쓰기 없애기 */
+        }
+    
+        ol.alpha-paren li {
+            counter-increment: item;
+            /* 각 <li>마다 카운터 증가 */
+            margin-bottom: 0.5em;
+            /* 아이템 사이 간격(선택) */
+        }
+    
+        ol.alpha-paren li::before {
+
+            content: "(" counter(item, lower-alpha) ") "; /* (a) (a) (c) … */
+            font-weight: bold;
+            /* 강조하고 싶으면 */
+        }
+    </style>
+
+    <style>
         ol.alpha-closeparen {
         list-style: none;           /* 기본 숫자·불릿 제거 */
         counter-reset: item;        /* 카운터 초기화 */
@@ -51,6 +76,27 @@
         }
 
     </style>
+    <style>
+        /* 1) 기본 숫자 마커 제거 & 카운터 초기화 */
+        ol.num-paren {
+        list-style: none; /* 기본 리스트 마커 제거 */
+        counter-reset: item; /* 카운터 초기화 */
+        padding-left: 0; /* 들여쓰기 제거 */
+        }
+        
+    /* 2) 각 <li>마다 카운터 증가 */
+        ol.num-paren li {
+        counter-increment: item;
+        margin-bottom: 0.5em; /* 아이템 간 간격 (선택) */
+        }
+    
+        /* 3) 원하는 형태로 번호 붙이기 */
+        ol.num-paren li::before {
+        content: "(" counter(item) ") "; /* (1) (2) (3) … */
+        font-weight: bold; /* 번호를 강조하고 싶으면 */
+        }
+    </style>
+
 
 
 </head>
@@ -184,7 +230,7 @@
     </p>   
 
 <p>&nbsp;&nbsp;&nbsp;
-<ol type="alpha-closeparen"> 
+<ol class="alpha-closeparen"> 
 <li>  어느 시점에서 어떤 주장이 반복된다면 (어떤 pₙ이 이전의 pₘ과 동일해진다면), 정당화는 순환적(circular)이 된다. 
 </li>
 <li>
@@ -391,7 +437,7 @@ A는 ‘주어진 것의 신화(Myth of the Given)’의 한 형태이며, 셀�
 </p>
 
 <p><small>  
-    <ol>
+    <ol class="num-paren">
         <li>  
         인간(및 비인간 동물)에게  학습(learning)이나 개념 형성(concept formation) 의 어떤 사전 과정 없이도 발생할 수 있는
         “빨강의 감각” 또는 “C#의 감각” 같은 특정 내적 에피소드(inner episodes)이 존재한다는 아이디어.
@@ -463,7 +509,7 @@ A는 ‘주어진 것의 신화(Myth of the Given)’의 한 형태이며, 셀�
     
     그러한 제안은 세 부분으로 이루어져 있다:
 
-    <ol type="alpha-closeparen">
+    <ol class="alpha-closeparen">
 
         <li> 나머지 경험적 믿음들의 정당화적 근거를 이루는 비추론적 믿음들의 한 부류가 존재한다.
         
