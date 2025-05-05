@@ -173,21 +173,8 @@
             counter-increment: item;
             margin-bottom: 0.5em;
         }
-    
-        /* ::marker 또는 ::before로 (i), (ii) 형태 생성 
-        ol.roman-closeparen li::marker {
-            content:  counter(item, lower-roman) ") ";
-             
-                만약 브라우저가 ::marker를 지원하지 않으면 아래 대체 방법을 사용하세요.
-             
-        */
-    
-    
-    
-        /* 대체 방법: ::before 사용 */
-         
-            ol.roman-paren li::before {
-              content: "(" counter(item, lower-roman) ") ";
+        ol.roman-closeparen li::before {
+              content:  counter(item, lower-roman) ") ";
               font-weight: bold;
               margin-right: 0.3em;
             }
@@ -1092,11 +1079,10 @@ F이다(x is F)”라고 보고하는 대신, 새로운 형태의 주장, 즉,
 인과적으로 야기되는 보고들에 관해 논의한 바 있다. [22]절의 첫 두 문단과 [21]절의 세번째 문단은,
  어떤 현상이 설명될 수 있는 두 가지 방식의 구분에 대해서 예비적 설명을  제시한다.
 
-<ol class="roman-closeparen" >
+<ol class="roman-paren" >
 <li> 전적으로 관찰 가능한 것 (비추론적으로 보고 가능한 것) 만으로 형식화된 경험적 일반화로부터 연역하여 어떤 현상을 설명하는 방식.
 이런 예로는 기체 샘플의 압력 변화를 법칙
-<p>PV = kT</p>
-와 적절한 배경 조건으로 설명하는 것이다.
+PV = kT 와 적절한 배경 조건으로 설명하는 것이다.
 </li>
 
 <li>
@@ -1403,9 +1389,11 @@ F이다(x is F)”라고 보고하는 대신, 새로운 형태의 주장, 즉,
 ‘정당화(justification)’는 ‘함/됨(–ing/–ed)’의 모호성을 띤다 ([24] 참조):
 실용적 행위로서의 정당화, 또는 규범적 지위로서의 정당화됨. 
 
-셀러스는 정당화된 상태를 얻으려면 반드시 정당화 활동을행위를 
- 그 지식의 권위와 인식적 특권을 스스로 지지할 수 있어야 한다고 본다. 이러한 **실천 우선(practice-first)**의 입장은 셀러스가 따르는
-특정한 실용주의이다.
+셀러스는  각자가 정당화 활동에 개입하여
+해당 주장을  권위와 인식적 특권으로 구원하는 것이 가능할 때만 
+정당화 지위를 획득할 수 있다고 주장한다. 
+이렇게 실천을 지위보다  우선시 하는 주장은 
+셀러스가 따르는 실용주의의 특정한 변형이다. 
 
 
 </p>
